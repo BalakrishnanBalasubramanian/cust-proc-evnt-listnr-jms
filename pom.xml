@@ -50,6 +50,12 @@
       <artifactId>jbpm-audit</artifactId>
       <version>7.9.0.Final</version>
     </dependency>
+      <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-persistence-jpa</artifactId>
+      <version>7.9.0.Final</version>
+      <scope>provided</scope>
+    </dependency>
     <!--dependency>
       <groupId>javax.jms</groupId>
       <artifactId>javax.jms-api</artifactId>
