@@ -42,5 +42,17 @@ public class SelectedEventListener implements org.kie.api.event.process.ProcessE
 		// Do nothing
 		System.out.println("Inside afterVariableChanged event");
 	}
+	
+	public void beforeNodeLeft(ProcessNodeLeftEvent event) {
+	}
+
+	public void afterNodeLeft(ProcessNodeLeftEvent event) {
+	}
+
+	public void afterNodeTriggered(ProcessVariableChangedEvent event) {
+	}
+
+	public void beforeNodeTriggered(ProcessVariableChangedEvent event) {
+	}
 
 }
