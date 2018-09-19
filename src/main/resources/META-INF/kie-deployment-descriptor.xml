@@ -16,7 +16,14 @@
     <task-event-listeners/>
     <globals/>
     <work-item-handlers/>
-    <environment-entries/>
+    <environment-entries>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>TestValue</identifier>
+            <parameters/>
+            <name>TestKey</name>
+        </environment-entry>
+    </environment-entries>
     <configurations/>
     <required-roles/>
     <remoteable-classes/>
