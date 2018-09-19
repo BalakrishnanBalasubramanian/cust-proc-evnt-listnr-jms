@@ -5,7 +5,7 @@ import org.kie.api.event.process.ProcessCompletedEvent;
 import org.kie.api.event.process.ProcessStartedEvent;
 import org.kie.api.event.process.ProcessVariableChangedEvent;
 
-public class SelectedEventListener extends AsyncAuditLogProducer {
+public class SelectedEventListener extends AsyncAuditLogProducer implements org.kie.api.event.process.ProcessEventListener {
 
 	public void beforeProcessStarted(ProcessStartedEvent event) {
 		// Do nothing
