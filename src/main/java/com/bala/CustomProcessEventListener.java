@@ -162,6 +162,8 @@ public class CustomProcessEventListener implements ProcessEventListener {
 		String nodeType = null;
 		String nodeName = "";
 
+		
+		// Get the node name, node type and node exit timestamp
 		Node node = event.getNodeInstance().getNode();
 		Date nodeInstanceExitDate = event.getEventDate();
 		NodeInstanceImpl nodeInstance = (NodeInstanceImpl) event.getNodeInstance();
@@ -172,8 +174,14 @@ public class CustomProcessEventListener implements ProcessEventListener {
 		} else {
 			nodeType = (String) nodeInstance.getMetaData("NodeType");
 		}
+
+		// Get the process instance variables
+		WorkflowProcessInstance workflowProcessInstance = (WorkflowProcessInstance) event.getProcessInstance();
+		VariableScopeInstance variableScope = (VariableScopeInstance) workflowProcessInstance
+				.getContextInstance(VariableScope.VARIABLE_SCOPE);
+		Collection<Object> variables = variableScope.getVariables().values();
 		
-		return "Node: " + nodeName + ", " + nodeType + "; " + "ExitDate: " + nodeInstanceExitDate;
+		return "Node: " + nodeName + ", " + nodeType + "; " + "ExitDate: " + nodeInstanceExitDate + ", Variables: " + variables;
 	}
 
 }
