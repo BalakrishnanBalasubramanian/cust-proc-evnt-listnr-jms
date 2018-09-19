@@ -9,7 +9,7 @@
     <event-listeners>
         <event-listener>
             <resolver>mvel</resolver>
-            <identifier>com.bala.custom.listener.EventListnerManager.newJMSInstance(false, (javax.jms.ConnectionFactory) javax.naming.InitialContext.doLookup("java:jboss/DefaultJMSConnectionFactory"), (javax.jms.Queue) javax.naming.InitialContext.doLookup("java:/jms/queue/KIEAUDIT"))</identifier>
+            <identifier>new com.bala.CustomProcessEventListener((javax.jms.ConnectionFactory) javax.naming.InitialContext.doLookup("java:jboss/DefaultJMSConnectionFactory"), (javax.jms.Queue) javax.naming.InitialContext.doLookup("java:/jms/queue/KIEAUDIT"), false)</identifier>
             <parameters/>
         </event-listener>
     </event-listeners>
