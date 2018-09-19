@@ -49,6 +49,7 @@
       <groupId>org.jbpm</groupId>
       <artifactId>jbpm-audit</artifactId>
       <version>7.9.0.Final</version>
+      <scope>runtime</scope>
     </dependency>
       <dependency>
       <groupId>org.drools</groupId>
