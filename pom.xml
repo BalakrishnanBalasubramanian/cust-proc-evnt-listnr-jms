@@ -55,7 +55,6 @@
 			<groupId>org.jbpm</groupId>
 			<artifactId>jbpm-kie-services</artifactId>
 			<version>7.7.0.Final</version>
-			 <scope>provided</scope>
 	</dependency>
   </dependencies>
   <build>
