@@ -109,7 +109,7 @@ public class CustomProcessEventListener implements ProcessEventListener {
 		this.transacted = transacted;
 	}
 
-	protected void sendMessage(Object messageContent) {
+	protected void sendMessage(String messageContent) {
 
 		if (connectionFactory == null && queue == null) {
 			throw new IllegalStateException("ConnectionFactory and Queue cannot be null");
@@ -123,7 +123,7 @@ public class CustomProcessEventListener implements ProcessEventListener {
 			queueConnection = connectionFactory.createConnection();
 			queueSession = queueConnection.createSession(transacted, Session.AUTO_ACKNOWLEDGE);
 
-			TextMessage message = queueSession.createTextMessage("<>>");
+			TextMessage message = queueSession.createTextMessage(messageContent);
 			message.setIntProperty("EventType", 7);
 			producer = queueSession.createProducer(queue);
 			producer.send(message);
