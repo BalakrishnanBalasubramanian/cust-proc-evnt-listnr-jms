@@ -24,7 +24,14 @@
             <name>TestKey</name>
         </environment-entry>
     </environment-entries>
-    <configurations/>
+    <configurations>
+        <configuration>
+            <resolver>mvel</resolver>
+            <identifier>TestConfigValue</identifier>
+            <parameters/>
+            <name>TestConfig</name>
+        </configuration>
+    </configurations>
     <required-roles/>
     <remoteable-classes/>
     <limit-serialization-classes>true</limit-serialization-classes>
