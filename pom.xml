@@ -47,13 +47,13 @@
     </dependency>
   </dependencies>
   <build>
-      <plugins>
-        <plugin>
-          <groupId>org.kie</groupId>
-          <artifactId>kie-maven-plugin</artifactId>
-          <version>7.9.0.Final</version>
-          <extensions>true</extensions>
-        </plugin>
-      </plugins>
+    <plugins>
+      <plugin>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>7.9.0.Final</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
   </build>
 </project>
