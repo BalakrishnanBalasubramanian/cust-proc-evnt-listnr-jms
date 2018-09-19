@@ -5,7 +5,7 @@ import org.kie.api.event.process.ProcessCompletedEvent;
 import org.kie.api.event.process.ProcessStartedEvent;
 import org.kie.api.event.process.ProcessVariableChangedEvent;
 
-public class SelectedEventListener extends org.jbpm.process.audit.jms.AsyncAuditLogProducer implements org.kie.api.event.process.ProcessEventListener {
+public class SelectedEventListener implements org.kie.api.event.process.ProcessEventListener {
 
 	public void beforeProcessStarted(ProcessStartedEvent event) {
 		// Do nothing
