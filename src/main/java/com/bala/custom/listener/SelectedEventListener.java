@@ -5,9 +5,8 @@ import org.kie.api.event.process.ProcessCompletedEvent;
 import org.kie.api.event.process.ProcessStartedEvent;
 import org.kie.api.event.process.ProcessVariableChangedEvent;
 
-public class SelectedEventListener implements org.kie.api.event.process.ProcessEventListener {
+public class SelectedEventListener extends AsyncAuditLogProducer {
 
-	@Override
 	public void beforeProcessStarted(ProcessStartedEvent event) {
 		// Do nothing
 		System.out.println("Inside beforeProcessStarted event");
@@ -41,18 +40,6 @@ public class SelectedEventListener implements org.kie.api.event.process.ProcessE
 	public void afterVariableChanged(ProcessVariableChangedEvent event) {
 		// Do nothing
 		System.out.println("Inside afterVariableChanged event");
-	}
-	
-	public void beforeNodeLeft(ProcessNodeLeftEvent event) {
-	}
-
-	public void afterNodeLeft(ProcessNodeLeftEvent event) {
-	}
-
-	public void afterNodeTriggered(ProcessVariableChangedEvent event) {
-	}
-
-	public void beforeNodeTriggered(ProcessVariableChangedEvent event) {
 	}
 
 }
